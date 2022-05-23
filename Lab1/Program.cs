@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+
 using System.Threading.Tasks;
 using System.Diagnostics;
 
@@ -25,11 +26,11 @@ namespace LabOne
             int wordsCount = 0;
             IList<string> wordsList = new List<string>();
             readFile = File.ReadAllText(address);
-            lines = readFile.Split("\n");
+            lines = readFile.Split('\n');
 
             for (int i = 0; i < lines.Length; i++)
             {
-                words = lines[i].Split(" ");
+                words = lines[i].Split(' ');
                 wordsCount = wordsCount + words.Length;
                 for (int j = 0; j < words.Length; j++)
                 {
@@ -51,7 +52,7 @@ namespace LabOne
 
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    words = lines[i].Split(" ");
+                    words = lines[i].Split(' ');
                     for (int j = 0; j < words.Length; j++)
                     {
                         wordsList.Add(words[j]);
@@ -104,7 +105,7 @@ namespace LabOne
             {
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    words = lines[i].Split(" ");
+                    words = lines[i].Split(' ');
                     wordsCount = wordsCount + words.Length;
                     for (int j = 0; j < words.Length; j++)
                     {
@@ -137,7 +138,7 @@ namespace LabOne
 
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    words = lines[i].Split(" ");
+                    words = lines[i].Split(' ') ;
                     for (int j = 0; j < words.Length; j++)
                     {
                         wordsList.Add(words[j]);
@@ -174,7 +175,7 @@ namespace LabOne
 
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    words = lines[i].Split(" ");
+                    words = lines[i].Split(' ');
                     for (int j = 0; j < words.Length; j++)
                     {
                         wordsList.Add(words[j].Trim());
@@ -209,7 +210,7 @@ namespace LabOne
 
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    words = lines[i].Split(" ");
+                    words = lines[i].Split(' ');
                     for (int j = 0; j < words.Length; j++)
                     {
                         wordsList.Add(words[j].Trim());
@@ -218,7 +219,7 @@ namespace LabOne
 
                 }
 
-                wordsList = wordsList.Where(w => w.StartsWith('j')).ToList();
+                wordsList = wordsList.Where(w => w.StartsWith("j")).ToList();
                 Console.WriteLine("There are " + Convert.ToString(wordsList.Count) + " words start with 'j'");
                 foreach (string word in wordsList)
                 {
@@ -246,7 +247,7 @@ namespace LabOne
 
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    words = lines[i].Split(" ");
+                    words = lines[i].Split(' ');
                     for (int j = 0; j < words.Length; j++)
                     {
                         wordsList.Add(words[j].Trim());
@@ -255,7 +256,7 @@ namespace LabOne
 
                 }
 
-                wordsList = wordsList.Where(w => w.EndsWith('d')).ToList();
+                wordsList = wordsList.Where(w => w.EndsWith("d")).ToList();
                 Console.WriteLine("There are " + Convert.ToString(wordsList.Count) + " words end with 'd'");
                 foreach (string word in wordsList)
                 {
@@ -283,7 +284,7 @@ namespace LabOne
 
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    words = lines[i].Split(" ");
+                    words = lines[i].Split(' ');
                     for (int j = 0; j < words.Length; j++)
                     {
                         wordsList.Add(words[j].Trim());
@@ -320,7 +321,7 @@ namespace LabOne
 
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    words = lines[i].Split(" ");
+                    words = lines[i].Split(' ') ;
                     for (int j = 0; j < words.Length; j++)
                     {
                         wordsList.Add(words[j].Trim());
@@ -329,7 +330,7 @@ namespace LabOne
 
                 }
 
-                wordsList = wordsList.Where(w => w.Length < 3 && w.StartsWith('a')).ToList();
+                wordsList = wordsList.Where(w => w.Length < 3 && w.StartsWith("a")).ToList();
                 Console.WriteLine("There are " + Convert.ToString(wordsList.Count) + " words that have less than 3 characters and start with 'a'");
                 foreach (string word in wordsList)
                 {
